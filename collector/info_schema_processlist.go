@@ -66,7 +66,7 @@ var (
 	processlistTimeDesc = prometheus.NewDesc(
 		prometheus.BuildFQName(namespace, informationSchema, "processlist_seconds"),
 		"The number of seconds threads have used split by current state.",
-		[]string{"command", "state"}, nil)
+		[]string{"command", "state", "user"}, nil)
 	processesByUserDesc = prometheus.NewDesc(
 		prometheus.BuildFQName(namespace, informationSchema, "processlist_processes_by_user"),
 		"The number of processes by user.",
